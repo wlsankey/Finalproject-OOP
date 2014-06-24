@@ -4,7 +4,8 @@ Almar = companies.Subcontractor(project_manager = "Mike Capala", trade = "plumbi
 
 print Almar.project_manager
 
-Almar = companies.Company(project_manager = "Mike Capala", trade = "plumbing", company_description = "plumbing / heating", 
+"""
+Almar = companies.Company(company_description = "plumbing / heating", 
 company_address_street = "680 Madison Ave",
 company_address_city = "New York", 
 company_address_suite = "", 
@@ -15,7 +16,7 @@ company_logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg",
 billing_type = "Requisition", 
 retainage_percent = "ten",
 )
-
+"""
 
 #
 #print Almar.description
