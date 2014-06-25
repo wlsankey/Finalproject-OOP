@@ -4,6 +4,12 @@ import companies
 ##
 ##print Almar.project_manager
 
+<<<<<<< HEAD
+=======
+print Almar.project_manager
+
+"""
+>>>>>>> origin/master
 Almar = companies.Company(company_description = "plumbing / heating", 
 company_address_street = "680 Madison Ave",
 company_address_city = "New York", 
@@ -15,9 +21,13 @@ company_logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg",
 billing_type = "Requisition", 
 retainage_percent = "ten",
 )
+<<<<<<< HEAD
 
 #ADDED instance with Subcontractor and its attributes
 Almar = companies.Subcontractor("Joe Doe", "plumbing")
+=======
+"""
+>>>>>>> origin/master
 
 
 print Almar.description
