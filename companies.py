@@ -23,21 +23,23 @@ class Company():
 
 class Subcontractor(Company):
 	def __init__(self, project_manager, trade):
-		Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
+		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.project_manager = project_manager
 		self.trade = trade
 
 
 class Material_Supplier(Company):
 	def __init__(self, material_type, deposit_required, primary_contact):
-		Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
+		#Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
+		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.material_type = material_type
 		self.deposit_required = deposit_required
 		self.primary_contact = primary_contact
 		
 class Consultant(Company):
 	def __init__(self, professional_service_type, primary_contact, project_billing_phase):
-		Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
+		#Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
+		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.professional_service_type = professional_service_type
 		self.primary_contact = primary_contact
 		self.project_billing_phase = project_billing_phase
