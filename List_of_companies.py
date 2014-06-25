@@ -1,10 +1,10 @@
 import companies
 
-Almar = companies.Subcontractor(project_manager = "Mike Capala", trade = "plumbing")
+##Almar = companies.Subcontractor(project_manager = "Mike Capala", trade = "plumbing")
+##
+##print Almar.project_manager
 
-print Almar.project_manager
-
-Almar = companies.Company(project_manager = "Mike Capala", trade = "plumbing", company_description = "plumbing / heating", 
+Almar = companies.Company(company_description = "plumbing / heating", 
 company_address_street = "680 Madison Ave",
 company_address_city = "New York", 
 company_address_suite = "", 
@@ -16,16 +16,21 @@ billing_type = "Requisition",
 retainage_percent = "ten",
 )
 
+#ADDED instance with Subcontractor and its attributes
+Almar = companies.Subcontractor("Joe Doe", "plumbing")
 
-#
-#print Almar.description
-#print Almar.street
-#print Almar.city
-#print Almar.suite
-#print Almar.zip
-#print Almar.state
-#print Almar.url
-#print Almar.logo
 
+print Almar.description
+print Almar.street
+print Almar.city
+print Almar.suite
+print Almar.zip
+print Almar.state
+print Almar.url
+print Almar.logo
+
+#ADDED code to test subclass Subcontrator instance
+print Almar.trade
+print Almar.project_manager
 
 companies.Company.show_website(Almar)

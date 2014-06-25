@@ -14,6 +14,9 @@ class Company():
 		self.billing_type = billing_type
 		self.retainage_percent = retainage_percent
 		
+	
+	BILLING_TYPE = ["requisition", "invoice", "other"]
+	
 	def show_website(self):
 		webbrowser.open(self.url)
 		
