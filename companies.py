@@ -12,7 +12,8 @@ Add following functions to Company class--
 """
 
 class Company():
-	def __init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent):
+	def __init__(self, name, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent):
+		self.name = name
 		self.description = company_description
 		self.street = company_address_street
 		self.city = company_address_city
@@ -29,15 +30,19 @@ class Company():
 	
 	def show_website(self):
 		webbrowser.open(self.url)
+	
+	def company_profile(self):
+		print self.name + " specializes in " + self.description +". " + "Find more information at the following link:  " + self.url
 		
 
 class Subcontractor(Company):
-	def __init__(self, project_manager, trade, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
-		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
+	def __init__(self, name, project_manager, trade, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
+		Company.__init__(self, name, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.project_manager = project_manager
 		self.trade = trade
 	
 	def print_all_attributes(self):
+		print self.name
 		print self.description
 		print self.street
 		print self.city
@@ -53,17 +58,17 @@ class Subcontractor(Company):
 
 
 class Material_Supplier(Company):
-	def __init__(self, material_type, deposit_required, primary_contact, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
+	def __init__(self, name, material_type, deposit_required, primary_contact, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
 		#Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
-		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
+		Company.__init__(self, name, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.material_type = material_type
 		self.deposit_required = deposit_required
 		self.primary_contact = primary_contact
 		
 class Consultant(Company):
-	def __init__(self, professional_service_type, primary_contact, project_billing_phase, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
+	def __init__(self, name, professional_service_type, primary_contact, project_billing_phase, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
 		#Company.__init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent)
-		Company.__init__(self, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
+		Company.__init__(self, name, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.professional_service_type = professional_service_type
 		self.primary_contact = primary_contact
 		self.project_billing_phase = project_billing_phase

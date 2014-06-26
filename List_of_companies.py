@@ -19,7 +19,7 @@ import companies
 #project_manager = "Ian Gray"
 #)
 
-Almar = companies.Subcontractor(description = "plumbing / heating", 
+Almar = companies.Subcontractor(name = "Almar", description = "plumbing / heating", 
 street = "680 Madison Ave",
 city = "New York", 
 suite = "", 
@@ -33,7 +33,7 @@ trade = "plumbing and waste",
 project_manager = "Ian Gray"
 )
 
-Goodman_Architects = companies.Consultant(description = "plumbing / heating", 
+Goodman_Architects = companies.Consultant(name = "Almar", description = "plumbing / heating", 
 street = "680 Madison Ave",
 city = "New York", 
 suite = "", 
@@ -90,6 +90,7 @@ project_billing_phase = "Design Development"
 #print Almar.project_manager
 
 Almar.print_all_attributes()
+Almar.company_profile()
 
 #companies.Company.show_website(Almar)
 #
