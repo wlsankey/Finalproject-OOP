@@ -5,7 +5,7 @@ import companies
 ##print Almar.project_manager
 
 
-#Almar = companies.Company(company_description = "plumbing / heating", 
+#Almar = companies.Subcontractor(company_description = "plumbing / heating", 
 #company_address_street = "680 Madison Ave",
 #company_address_city = "New York", 
 #company_address_suite = "", 
@@ -15,9 +15,11 @@ import companies
 #company_logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg", 
 #billing_type = "Requisition", 
 #retainage_percent = "ten",
+#trade = "plumbing and waste",
+#project_manager = "Ian Gray"
 #)
 
-Almar = companies.Company(description = "plumbing / heating", 
+Almar = companies.Subcontractor(description = "plumbing / heating", 
 street = "680 Madison Ave",
 city = "New York", 
 suite = "", 
@@ -27,7 +29,39 @@ url = "https://www.facebook.com/pages/Almar-Plumbing-Heating-Corp/14320001572583
 logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg", 
 billing_type = "Requisition", 
 retainage_percent = "ten",
+trade = "plumbing and waste",
+project_manager = "Ian Gray"
 )
+
+Goodman_Architects = companies.Consultant(description = "plumbing / heating", 
+street = "680 Madison Ave",
+city = "New York", 
+suite = "", 
+zip = "11238",  
+state = "New York",
+url = "https://www.facebook.com/pages/Almar-Plumbing-Heating-Corp/143200015725831",
+logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg", 
+billing_type = "Requisition", 
+retainage_percent = "ten",
+primary_contact = "Ian Gray", 
+professional_service_type = "Architect",
+project_billing_phase = "Design Development"
+)
+
+
+
+#Almar = companies.Company("plumbing / heating", 
+#"680 Madison Ave",
+#"New York", 
+#"", 
+#"11238",  
+#"New York",
+#"https://www.facebook.com/pages/Almar-Plumbing-Heating-Corp/143200015725831",
+#"http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg", 
+#"Requisition", 
+#"ten"
+#)
+
 #ADDED instance with Subcontractor and its attributes
 #Almar = companies.Subcontractor("Joe Doe", "plumbing")
 
@@ -42,17 +76,25 @@ retainage_percent = "ten",
 #		self.billing_type = billing_type
 #		self.retainage_percent = retainage_percent
 		
-print Almar.description
-print Almar.street
-print Almar.city
-print Almar.suite
-print Almar.zip
-print Almar.state
-print Almar.url
-print Almar.logo
+#print Almar.description
+#print Almar.street
+#print Almar.city
+#print Almar.suite
+#print Almar.zip
+#print Almar.state
+#print Almar.url
+#print Almar.logo
 
 #ADDED code to test subclass Subcontrator instance
-print Almar.trade
-print Almar.project_manager
+#print Almar.trade
+#print Almar.project_manager
 
-companies.Company.show_website(Almar)
+Almar.print_all_attributes()
+
+#companies.Company.show_website(Almar)
+#
+#if hasattr(Almar, 'city'):
+#    if Almar.city == "Texas":
+#        print "True"
+#else:
+#    print "False"
