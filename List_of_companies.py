@@ -33,17 +33,17 @@ trade = "plumbing and waste",
 project_manager = "Ian Gray"
 )
 
-Goodman_Architects = companies.Consultant(name = "Almar", description = "plumbing / heating", 
-street = "680 Madison Ave",
+Goodman_Architects = companies.Consultant(name = "Goodman Architects", description = "plumbing / heating", 
+street = "123 5th Ave",
 city = "New York", 
-suite = "", 
-zip = "11238",  
+suite = "12000", 
+zip = "10001",  
 state = "New York",
-url = "https://www.facebook.com/pages/Almar-Plumbing-Heating-Corp/143200015725831",
-logo = "http://media.merchantcircle.com/16422355/Logo8-24_full.jpeg", 
-billing_type = "Requisition", 
-retainage_percent = "ten",
-primary_contact = "Ian Gray", 
+url = "http://fagoodman.com/",
+logo = "http://fagoodman.com/wp-content/gallery/renderings/renderings-11.jpg", 
+billing_type = BILLING_TYPE[0], 
+retainage_percent = 0.10,
+primary_contact = "Jonathan Goodman", 
 professional_service_type = "Architect",
 project_billing_phase = "Design Development"
 )
