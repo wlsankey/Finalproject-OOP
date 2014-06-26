@@ -1,6 +1,16 @@
 
 import webbrowser
 
+
+"""
+Add following functions to Company class--
+1. print_all_attributes
+2. open company url
+3. display company logo if available
+4. print key billing information (billing_type, retainage percent, company name)
+5. print company profile (with company name, description, company_logo, company_url)
+"""
+
 class Company():
 	def __init__(self, company_description, company_address_street, company_address_city, company_address_suite, company_address_zip, company_address_state, company_url, company_logo, billing_type, retainage_percent):
 		self.description = company_description
