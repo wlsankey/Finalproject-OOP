@@ -1,5 +1,9 @@
 import companies
 
+# DATA -- Creation of class instances and population of attributes
+""" Here I have created three instances of the various classes creates in companies.py. These instances allow me to test the classes,
+their definitions and methods, and ensure that they function appropriately when interpreted."""
+
 
 Almar = companies.Subcontractor(name = "Almar", description = "plumbing / heating", 
 street = "680 Madison Ave",
@@ -30,7 +34,6 @@ professional_service_type = "Architect",
 project_billing_phase = "Design Development"
 )
 
-#ame, material_type, deposit_required, primary_contact, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent
 
 RG_New_York_Tile = companies.Material_Supplier(name = "R.G. New York Tile, Inc.", 
 description = "marble supply", 
