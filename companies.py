@@ -79,26 +79,13 @@ class Company():
 			print self.professional_service_type
 		print '\n'
 
+
 class Subcontractor(Company):
 	def __init__(self, name, project_manager, trade, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
 		Company.__init__(self, name, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent)
 		self.project_manager = project_manager
 		self.trade = trade
 	
-	#def print_all_attributes(self):
-	#	print self.name
-	#	print self.description
-	#	print self.street
-	#	print self.city
-	#	print self.suite
-	#	print self.zip
-	#	print self.state
-	#	print self.url
-	#	print self.logo
-	#	print self.billing_type
-	#	print self.retainage_percent
-	#	print self.project_manager
-	#	print self.trade
 
 
 class Material_Supplier(Company):

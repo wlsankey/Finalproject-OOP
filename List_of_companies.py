@@ -21,7 +21,7 @@ city = "New York",
 suite = "12000", 
 zip = "10001",  
 state = "New York",
-url = "http://fagoodman.com/",
+url = "",
 logo = "http://fagoodman.com/wp-content/gallery/renderings/renderings-11.jpg", 
 billing_type = companies.Company.BILLING_TYPE[1], 
 retainage_percent = 0.10,
@@ -30,12 +30,38 @@ professional_service_type = "Architect",
 project_billing_phase = "Design Development"
 )
 
+#ame, material_type, deposit_required, primary_contact, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent
 
+RG_New_York_Tile = companies.Material_Supplier(name = "R.G. New York Tile, Inc.", 
+description = "marble supply", 
+street = "22 W 29thh Street",
+city = "New York", 
+suite = "", 
+zip = "10021",  
+state = "New York",
+url = "http://www.rgnytiles.com/",
+logo = "", 
+billing_type = companies.Company.BILLING_TYPE[1], 
+retainage_percent = 0.15,
+primary_contact = "Rob DiCarpala", 
+deposit_required = "Yes, 30% deposit",
+material_type = "stone and flooring"
+)
+
+
+
+#TEST FOR SUBCONTRACTOR class
 Almar.print_all_attributes()
 Almar.company_profile()
+Almar.show_website()
 
+#TEST FOR CONSULTANT class
 Goodman_Architects.print_all_attributes()
 Goodman_Architects.company_profile()
 Goodman_Architects.show_website()
 
+#TEST FOR MATERIAL SUPPLIER class
+RG_New_York_Tile.print_all_attributes()
+RG_New_York_Tile.company_profile()
+RG_New_York_Tile.show_website()
 
