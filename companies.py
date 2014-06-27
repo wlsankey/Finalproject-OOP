@@ -29,11 +29,55 @@ class Company():
 	BILLING_TYPE = ["requisition", "invoice", "other"]
 	
 	def show_website(self):
-		webbrowser.open(self.url)
+		if hasattr(self, 'url') and self.url != "":
+			webbrowser.open(self.url)
+		else: 
+			print "PLEASE provide website address"
+			web_address = raw_input("Type address here: ")
+			webbrowser.open(web_address)
+		
 	
 	def company_profile(self):
 		print self.name + " specializes in " + self.description +". " + "Find more information at the following link:  " + self.url
-		
+	
+	def print_all_attributes(self):
+		if hasattr(self, 'name'):
+			print self.name
+		if hasattr(self, 'description'):
+			print self.description
+		if hasattr(self, 'street'):
+			print self.street
+		if hasattr(self, 'city'):
+			print self.city
+		if hasattr(self, 'suite'):
+			print self.suite
+		if hasattr(self, 'zip'):
+			print self.zip
+		if hasattr(self, 'state'):
+			print self.state
+		if hasattr(self, 'url'):
+			print self.url
+		if hasattr(self, 'logo'):
+			print self.logo
+		if hasattr(self, 'billing_type'):
+			print self.billing_type
+		if hasattr(self, 'retainage_percent'):
+			print self.retainage_percent
+		if hasattr(self, 'project_manager'):
+			print self.project_manager
+		if hasattr(self, 'trade'):
+			print self.trade
+		if hasattr(self, 'material_type'):
+			print self.material_type
+		if hasattr(self, 'deposit_required'):
+			print self.deposit_required
+		if hasattr(self, 'primary_contact'):
+			print self.primary_contact
+		if hasattr(self, 'project_billing_phase'):
+			print self.project_billing_phase
+		if hasattr(self, 'professional_service_type'):
+			print self.professional_service_type
+		print '\n'
 
 class Subcontractor(Company):
 	def __init__(self, name, project_manager, trade, description, street, city, suite, zip, state, url, logo, billing_type, retainage_percent):
@@ -41,20 +85,20 @@ class Subcontractor(Company):
 		self.project_manager = project_manager
 		self.trade = trade
 	
-	def print_all_attributes(self):
-		print self.name
-		print self.description
-		print self.street
-		print self.city
-		print self.suite
-		print self.zip
-		print self.state
-		print self.url
-		print self.logo
-		print self.billing_type
-		print self.retainage_percent
-		print self.project_manager
-		print self.trade
+	#def print_all_attributes(self):
+	#	print self.name
+	#	print self.description
+	#	print self.street
+	#	print self.city
+	#	print self.suite
+	#	print self.zip
+	#	print self.state
+	#	print self.url
+	#	print self.logo
+	#	print self.billing_type
+	#	print self.retainage_percent
+	#	print self.project_manager
+	#	print self.trade
 
 
 class Material_Supplier(Company):
